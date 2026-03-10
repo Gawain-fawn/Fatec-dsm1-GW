@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Notícias da Hora</title>
+  <style>
+    /* Estilos simples para ficar apresentável */
+    :root {
+      --cor-primaria: #0f172a;   /* azul escuro/slate */
+      --cor-secundaria: #1e293b; /* slate mais claro */
+      --cor-destaque: #2563eb;   /* azul destaque */
+      --cor-fundo: #0b1220;
+      --cor-texto: #e2e8f0;
+    }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 20% -10%, #1b2752 5%, #101326 40%, #080a16 70%, #04060e 90%), #0b1220;
+      color: var(--cor-texto);
+      line-height: 1.6;
+    }
+    header {
+      padding: 48px 20px 32px;
+      text-align: center;
+      background: linear-gradient(180deg, rgba(37, 99, 235, .12), rgba(37, 99, 235, .02));
+      border-bottom: 1px solid rgba(226, 232, 240, .08);
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(28px, 5vw, 40px);
+      font-weight: 800;
+      letter-spacing: .3px;
+      color: #f8fafc;
+      text-shadow: 0 10px 20px rgba(37,99,235,.15);
+    }
+    p.subtitulo {
+      margin: 0;
+      color: #cbd5e1;
+      font-size: clamp(14px, 2.5vw, 18px);
+    }
+    main {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 20px 60px;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .card {
+      background: linear-gradient(180deg, rgba(30, 41, 59, .55), rgba(15, 23, 42, .6));
+      border: 1px solid rgba(226, 232, 240, .08);
+      border-radius: 14px;
+      padding: 18px;
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(37, 99, 235, .35);
+      box-shadow: 0 12px 40px rgba(37, 99, 235, .18);
+    }
+    .card h2 {
+      margin: 0 0 8px;
+      font-size: 20px;
+      color: #e2e8f0;
+    }
+    .card p {
+      margin: 0 0 16px;
+      color: #cbd5e1;
+    }
+    .btn-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      background: #0b1220;
+      color: #e2e8f0;
+      text-decoration: none;
+      border: 1px solid rgba(226, 232, 240, .12);
+      border-radius: 10px;
+      font-weight: 600;
+      transition: background .2s ease, border-color .2s ease, transform .2s ease;
+    }
+    .btn-link:hover {
+      background: #0f172a;
+      border-color: rgba(37, 99, 235, .45);
+      transform: translateY(-1px);
+    }
+    footer {
+      text-align: center;
+      padding: 24px 16px 40px;
+      color: #94a3b8;
+      border-top: 1px solid rgba(226, 232, 240, .08);
+      background: linear-gradient(0deg, rgba(37, 99, 235, .06), rgba(37, 99, 235, 0));
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Notícias da Hora</h1>
+    <p class="subtitulo">As manchetes mais recentes em um só lugar.</p>
+  </header>
+
+  <main>
+    <section aria-labelledby="manchetes">
+      <h2 id="manchetes" style="position:absolute; left:-9999px;">Manchetes</h2>
+
+      <div class="card-grid">
+        <article class="card">
+          <h2>Notícia 1</h2>
+          <p>Resumo breve da notícia 1 para chamar a atenção do leitor.</p>
+          <a class="btn-link" href="noticia1.html">Ler Notícia 1 →</a>
+        </article>
+
+        <article class="card">
+          <h2>Notícia 2</h2>
+          <p>Resumo breve da notícia 2 com os principais destaques.</p>
+          <a class="btn-link" href="noticia2.html">Ler Notícia 2 →</a>
+        </article>
+
+        <article class="card">
+          <h2>Notícia 3</h2>
+          <p>Resumo breve da notícia 3 com informações essenciais.</p>
+          <a class="btn-link" href="noticia3.html">Ler Notícia 3 →</a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="ano"></span> Notícias da Hora • Todos os direitos reservados
+  </footer>
+
+  <script>
+    // Atualiza o ano automaticamente
+    document.getElementById('ano').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
